@@ -18,6 +18,14 @@ import mlflow.sklearn
 
 import logging
 
+import dagshub
+dagshub.init(repo_owner='fadhelhdz', repo_name='mlflow_experiment', mlflow=True)
+
+# import mlflow
+# with mlflow.start_run():
+#   mlflow.log_param('parameter name', 'value')
+#   mlflow.log_metric('metric name', 1)
+
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
